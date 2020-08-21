@@ -9,5 +9,5 @@ Image convergence, leveraging similar concept as in image restoration methods li
 A plain autoencoder with convolution layers will do.
 
 ## Reference
-[1] Noise2Noise: Learning Image Restoration without Clean Data [arxiv](https://arxiv.org/abs/1803.04189)  
-[2] Noise2Void - Learning Denoising from Single Noisy Images [arxiv](https://arxiv.org/abs/1811.10980)  
+[1] Noise2Noise: Learning Image Restoration without Clean Data ([arxiv](https://arxiv.org/abs/1803.04189))  
+[2] Noise2Void - Learning Denoising from Single Noisy Images ([arxiv](https://arxiv.org/abs/1811.10980))  
