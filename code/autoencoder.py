@@ -39,8 +39,8 @@ class conv_ae(tfk.Model):
         with tf.GradientTape() as tape:
             y_pred = self.decoder(self.encoder(x))
             reconstruction_loss = tf.reduce_mean(
-                    tfk.losses.binary_crossentropy(y, y_pred)
-                    )
+                tfk.losses.binary_crossentropy(y, y_pred)
+            )
         gradients = tape.gradient(reconstruction_loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(gradients, self.trainable_weights))
         return {"loss": reconstruction_loss}
@@ -48,7 +48,5 @@ class conv_ae(tfk.Model):
     def test_step(self, data):
         x, y = data
         y_pred = self.decoder(self.encoder(x))
-        reconstruction_loss = tf.reduce_mean(
-                tfk.losses.binary_crossentropy(y, y_pred)
-                )
+        reconstruction_loss = tf.reduce_mean(tfk.losses.binary_crossentropy(y, y_pred))
         return {"loss": reconstruction_loss}
