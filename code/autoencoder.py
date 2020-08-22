@@ -18,7 +18,7 @@ class conv_ae(tfk.Model):
         x = tfk.layers.Conv2D(**conv_2_params)(x)
         intermediate_shape = x.shape[1:]
         x = tfk.layers.Flatten()(x)
-        encoder_output = tfk.layers.Dense(units=latent_dim, activation="relu")(x)
+        encoder_output = tfk.layers.Dense(units=latent_dim)(x)
         self.encoder = tfk.Model(encoder_input, encoder_output, name="encoder")
 
         # decoder
