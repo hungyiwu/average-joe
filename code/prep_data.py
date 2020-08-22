@@ -57,8 +57,10 @@ out_fp.mkdir()
 
 np.save(out_fp / "x_train.npy", xt)
 np.save(out_fp / "x_train_shuffled.npy", xt2)
+np.save(out_fp / "y_train.npy", yt)
 np.save(out_fp / "x_test.npy", xe)
 np.save(out_fp / "x_test_shuffled.npy", xe2)
+np.save(out_fp / "y_test.npy", ye)
 
 with open(out_fp / "config.json", "w") as f:
     json.dump(dict(test_split=test_split), f)
