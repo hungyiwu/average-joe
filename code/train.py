@@ -13,7 +13,7 @@ checkpoint_fp = "./checkpoints"
 
 # params
 latent_dim = 2
-train_params = dict(batch_size=128, epochs=1, validation_split=0.3, shuffle=True)
+train_params = dict(batch_size=128, epochs=10, validation_split=0.3, shuffle=True)
 opt = "adam"
 
 # load data
